@@ -1,0 +1,66 @@
+ /* demo styles */
+    body {
+      background-color: #A9A9A9;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }   
+    
+	
+ /*   #player-placeholder {
+      left: 20%;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      max-height:800px;
+      margin: auto;
+      width: 840px;
+      height: 560px;  
+    } */
+    
+    #menuButton input {
+      background-color:dodgerBlue !important;
+      position: absolute;
+      font-weight:bold;
+      margin: auto;
+      top: 0;
+      right: 10%;
+      z-index: 99999999999;
+    }
+
+    #clearStorage input {
+      background-color:red !important;
+      position: absolute;
+      font-weight:bold;
+      margin: auto;
+      bottom: 15%;
+      left: 1%;
+      z-index: 99999999999;
+    }
+
+    #curDeliveryType input {
+      background-color:white !important;
+      color: blue;
+      align-content: center;
+      position: absolute;
+      font-weight:bold;
+      margin: auto;
+      bottom: 10%;
+      left: 1%;
+      z-index: 99999999999;
+    }
+
+    .image{
+      position: absolute;
+      width: 60;
+      height: 60;
+    }
+	
+	.tg  {border-collapse:collapse;border-spacing:0;text-align: center;z-index: 99999999999; position: absolute; left:70%}
+	.tg td{font-family:Arial, sans-serif;font-size:12px;padding:5px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background-color:#ffffff;text-align: left;}
+	.tg th{font-family:Arial, sans-serif;font-size:16px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background-color:#ffffff;text-align: left;}
+	.tg .tg-title{background-color:#808080;font-weight:bold;text-align: center;}
+	.th .tg-title{background-color:#808080;font-weight:bold;text-align: center;}
+	.tg .tg-warning{color:#fe0000}
+  
