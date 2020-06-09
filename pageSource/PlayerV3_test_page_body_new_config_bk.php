@@ -1,13 +1,4 @@
 <?php
-
-/***********************************************************************************************
-*** Creating embed code of the player using new player configuration                         ***
-*** Loading player with selected configuration by calling the functions from back-end side   ***
-*** Also calling the function for adding relevant plugins and UI components                  ***
-*** Created by Alex Greenfeld                                                                ***
-***********************************************************************************************/
-
-
  include 'config/Player_V3_plugins.php';
  include 'config/testPageConfig_Player_V3.php';
  include 'config/Player_V3_UI_components.php';
@@ -15,7 +6,7 @@
 		echo '
 
 	
-	  <script src="' . getCdnUrl() . '/p/' . getPartnerId() . '/sp/' . getPartnerId() . '00/embedPlaykitJs/uiconf_id/' . getUIConf() . '/partner_id/' . getPartnerId(),componentsVersions(). '"></script>
+	  <script src="' . getCdnUrl() . '/p/' . getPartnerId() . '/sp/' . getPartnerId() . '00/embedPlaykitJs/uiconf_id/' . getUIConf() . '/partner_id/' . getPartnerId() . '"></script>
 		<script src="' . getPlayerLoaderPath() . '" type="text/javascript"></script>
 
 	<div class="col-md-12 col-lg-8 col-sm-12 embed-responsive embed-responsive-16by9">
@@ -33,10 +24,10 @@
 		'};
 		  var playerConfig = {
 				"sources": {
-					"poster": "http://externaltests.dev.kaltura.com/player/library_Player_V3/smartPages/images/Kaltura_poster.png",'
-					. sourcesOptions(), externalCaptions() .
-												
-			'},'
+					"poster": "http://externaltests.dev.kaltura.com/player/library_Player_V3/smartPages/images/Kaltura_poster.png",
+					
+									
+			},'
 		 . logLevel() 
 		 . chromeCast() 
 			.	'targetId:"' . getTargetId() . '",'
@@ -64,8 +55,8 @@ getActiveBandwidth();
 accessControlEvents();
 '.getAutomationCode().'
 </script>
-	<div style="position:relative; width:30%; border-style:solid; border-width:thick; border-color:blue; background-color:lightgrey; font-size: 11px;">
-		<b>Plugins versions:</b>
+	<div style="position:relative; width:30%; border-style:solid; border-width:thick; border-color:blue; background-color:lightgrey; font-size:14px;">
+		<h6>Plugins versions:</h6>
 		<ul id="availablePlugins"></ul>
 	</div>
 </body>

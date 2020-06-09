@@ -1,12 +1,5 @@
 <?php
  
-/***********************************************************************************************
-*** Creating embed code of the player using old player configuration                         ***
-*** Loading player with selected configuration by calling the functions from back-end side   ***
-*** also calling the function for adding relevant plugins and UI components                  ***
-*** Created by Alex Greenfeld                                                                ***
-************************************************************************************************/
-
  include 'config/Player_V3_plugins.php';
  include 'config/testPageConfig_Player_V3.php';
  include 'config/Player_V3_UI_components.php';
@@ -47,21 +40,14 @@
 			'
 			},'
 			. plugins() .
-		'
-	     }
+		'}
 		  };
 		  
 		  
 getPlayer(playerConfig, mediaInfo); 
 currentDeliveryType();
 playerVersion();
-
-accessControlEvents();
 '.getAutomationCode().'
 </script>
-	<div style="position:relative; width:18%; border-style:solid; border-width:thick; border-color:blue; background-color:lightgrey">
-		<h5>Plugins versions:</h5>
-		<ul id="availablePlugins"></ul>
-	</div>
 </body>
 </html>' ?>

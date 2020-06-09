@@ -90,20 +90,18 @@
 	// Creating dropbox with available partner IDs: testing - 1091, ott - 198, testing drm - 4171, production - 1740481, production drm - 1804331
 	// Parameters: 1st - value that will moved in GET, 2nd - color of the option text, 3rd - the option text
 	$partnerId_test =          new Option("1091","limeGreen","1091 - testing regular");
-	$partnerId_saas =          new Option("6627","limeGreen","6627 - SAAS S3");
 	$partnerId_ott_test =      new Option("198","purple","198 - OTT testing");
 	$partnerId_ott_prod =      new Option("3009","purple","3009 - OTT production");
 	$partnerId_test_drm =      new Option("4171","green","4171 - testing DRM");
 	$partnerId_prod =          new Option("1740481","dodgerBlue","1740481 - production regular");
 	$partnerId_prod_drm =      new Option("1804331","blue","1804331 - production DRM");
-	$partnerIds =              array($partnerId_test, $partnerId_saas, $partnerId_test_drm, $partnerId_prod, $partnerId_prod_drm, $partnerId_ott_test, $partnerId_ott_prod);
+	$partnerIds =              array($partnerId_test, $partnerId_test_drm, $partnerId_prod, $partnerId_prod_drm, $partnerId_ott_test, $partnerId_ott_prod);
 	
 	
 	//**************** UI Conf IDs **********************************************************************************
 	// Creating dropbox with available UI Confs
 	// Parameters: 1st - value that will moved in GET, 2nd - color of the option text, 3rd - the option text
 	$uiConfId_test =           new Option("testReg","limeGreen","15215933 - Testing");
-	$uiConfId_test_canary =    new Option("testReg","limeGreen","15225670  - Testing canary");
 	$uiConfId_test_latest =    new Option("testlatestReg","limeGreen","15215773 - Testing latest");
 	$uiConfId_no_plug_test =   new Option("testNoPlug","limeGreen","15214756 - Testing no plugins");
 	$uiConfId_test_ovp_youtube=new Option("testOvpOren","","15220044 - Testing OVP Youtube");
@@ -117,7 +115,7 @@
 	$uiConfId_no_plug_ott =    new Option("ottNoPlug","purple","15216119 - OTT Testing no plugins");
 //	$uiConfId_ott_prod =       new Option("ottProd","purple","42700261 - OTT production");
 	$uiConfCustom =            new Option("cust","green","Custom...");
-	$uiConfIds =               array($uiConfId_test, $uiConfId_test_canary, $uiConfId_test_latest, $uiConfId_no_plug_test, $uiConfId_test_youbora, $uiConfId_test_drm, $uiConfId_prod, $uiConfId_prod_latest, $uiConfId_prod_drm, $uiConfId_ott_test, $uiConfId_no_plug_ott, $uiConfId_ott_prod, $uiConfCustom);
+	$uiConfIds =               array($uiConfId_test, $uiConfId_test_latest, $uiConfId_no_plug_test, $uiConfId_test_youbora, $uiConfId_test_drm, $uiConfId_prod, $uiConfId_prod_latest, $uiConfId_prod_drm, $uiConfId_ott_test, $uiConfId_no_plug_ott, $uiConfId_ott_prod, $uiConfCustom);
 
 //	$uiConfIds = uiConfList();
 	$uiConfIdOvpTest = 	array($uiConfId_test, $uiConfId_test_latest, $uiConfId_no_plug_test, $uiConfId_test_studio, $uiConfId_test_ovp_cc, $uiConfId_test_youbora);
@@ -413,8 +411,7 @@ function StreamList(){
 	$prePod1 =          	   new Option("VastPrePod1","black","Cusotm: Vast 3 Preroll pod - 2nd broken");
 	$vast3redirects =          new Option("Vast3Redirect","black","Vast Preroll - 3 redirects");
 	$vast5redirects =          new Option("Vast5Redirect","black","Vast Preroll - 5 redirects");
-	$preMid45Post =          new Option("preMid45Post","black","Custom: pre - mid 45sec- post");
-	$advertisiments =          array($noAd, $emptyAdTag, $VAMPAdsPlaylistWithSkip, $preWithoutSkip, $longPreSkip, $preWithSkip, $redirectLinear, $redirectError, $redirectBrokFall, $nonLinear, $smallNonLinear, $vmapPreroll, $vmapPrerollBumper, $vmapPostroll, $vmapPostrollBumper, $vmapPreMidPost, $vmapPreMidStPost, $vmapPreMidOpPost, $vmapPreMidStPostBumper, $vmapPreMidOpPostBumper, $vmapPre10MidPost, $preCompanions, $vmapMidPost, $prePod3, $prePod1, $vast3redirects, $vast5redirects,$preMid45Post);
+	$advertisiments =          array($noAd, $emptyAdTag, $VAMPAdsPlaylistWithSkip, $preWithoutSkip, $longPreSkip, $preWithSkip, $redirectLinear, $redirectError, $redirectBrokFall, $nonLinear, $smallNonLinear, $vmapPreroll, $vmapPrerollBumper, $vmapPostroll, $vmapPostrollBumper, $vmapPreMidPost, $vmapPreMidStPost, $vmapPreMidOpPost, $vmapPreMidStPostBumper, $vmapPreMidOpPostBumper, $vmapPre10MidPost, $preCompanions, $vmapMidPost, $prePod3, $prePod1, $vast3redirects, $vast5redirects);
 	
 	/* Play Ad after specific time, configured in seconds, so when insert 20 second, pre-roll Ad and mid-roll on 15th seconds will be skiped
 	   2nd parameter - time in seconds, empty by default */
@@ -430,12 +427,10 @@ function StreamList(){
     /* Dai sources  */
 	$daiEmpty =                 new Option("noDai","black","");
 	$daiVodHls =                new Option("daiHls","black","VOD HLS");
-	$daiVodHls2 =               new Option("daiHls2","black","VOD HLS2");
 	$daiVodDash =               new Option("daiDash","black","VOD DASH");
 	$daiLive =                  new Option("daiLive","black","Live HLS");
-	$daiLiveViacom =            new Option("daiLiveViacom","black","Live Viacom");
 	$daiErr =                   new Option("daiErr","black","DAI Error");
-	$daiSources =               array($daiEmpty, $daiVodHls, $daiVodHls2, $daiVodDash, $daiLive, $daiLiveViacom, $daiErr);
+	$daiSources =               array($daiEmpty, $daiVodHls, $daiVodDash, $daiLive, $daiErr);
 
 	//***************************** Bumpers *******************************************************
 	//Creating checkbox for enable/disable Bumper plugin, disable when checked

@@ -40,18 +40,12 @@ function UI_Components(){
 	if ( $_GET['Share']=='on'){
 		$socialNetworks = socialNetworks('true');
 	}else{
-		$socialNetworks = "";
-	}
-
-	if ( $_GET['Logo']=='on'){
-		$customLogo = customLogo('true');
-	}else{
-		$customLogo = "";
+		$socialNetworks = socialNetworks('false');
 	}
 
 	return "\n\t\t\t\t ui: {
 		  \n\t\t\t\t disable: $chkDisUI,  
-		     \t\tcomponents: {\n $watermark $iosFullscreen $socialNetworks $customLogo
+		     \t\tcomponents: {\n $watermark $iosFullscreen $socialNetworks
 		  \t\t\t}
       \t\t\t }, 
 	";
@@ -92,17 +86,7 @@ function socialNetworks($state){
 			//embedUrl: '...',
 			enable: $state, //default is false
 			enableTimeOffset: true, //default is false
-	 	},
-	";
-}
-
-function customLogo($state){
-	return "
-	logo:{
-		img: 'http://externaltests.dev.kaltura.com/player/library_Player_V3/smartPages/images/kaltura_logo.jpg',
-		url: 'https://corp.kaltura.com/',
-		text: 'Kaltura logo'
-	  }
+	 	}
 	";
 }
 

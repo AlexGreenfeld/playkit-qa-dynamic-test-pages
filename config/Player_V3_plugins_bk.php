@@ -84,9 +84,6 @@ define("Vast3Redirect", "http://externaltests.dev.kaltura.com/playKitApp/adManag
 // Vast pre-roll with 5 redirects
 define("Vast5Redirect", "http://externaltests.dev.kaltura.com/playKitApp/adManager/customAdTags/vast/wrapper_in_wrapper.xml");
 
-// Vast pre-mid-post when midroll after 45 sec
-define("preMid45Post", "https://externaltests.dev.kaltura.com/standalonePlayer/Ads/adManager/customAdTags/vmap/inline/ima_pre_45sec_mid_post.xml");
-
 //Empty Ad Tag
 define ("emptyAdTag", '');
 
@@ -289,8 +286,7 @@ function Youbora($switch) {
    return "\n\t\t\t\t\t\t youbora: {
 			\t\t\t\t disable: $switch ,
             \t\t\t\t options: {
-			   \t\t\t\t\t 'accountCode': 'kalturatest',
-			   \t\t\t\t\t 'username': 'Kalturatestadmin'
+               \t\t\t\t\t 'accountCode': 'kalturatest'
             \t\t\t\t },
         	\t\t\t }," ;
 }
@@ -422,32 +418,19 @@ function daiPlugin($switch){
 				\t\t\t\tcontentSourceId: '19463',
 				\t\t\t\tvideoId: 'tears-of-steel'
 				\t\t\t\t},";
-	}elseif ($_GET['dai'] == "daiHls2"){
-			return "\n\t\t\t\t\t\t imadai: {
-				\t\t\t\tdisable: $switch,
-				\t\t\t\tassetTitle:'VOD - Google I/O',
-				\t\t\t\tcontentSourceId: '19463',
-					\t\t\t\tvideoId: 'googleio-highlights'
-				\t\t\t\t},";
 	}elseif ($_GET['dai'] == "daiDash"){
 			return "\n\t\t\t\t\t\t imadai: {
 				\t\t\t\tdisable: $switch,
 				\t\t\t\tassetTitle:'BBB-widevine',
 				\t\t\t\tcontentSourceId: '2474148',
 					\t\t\t\tvideoId: 'bbb-widevine'
-				\t\t\t\t},";			
+				\t\t\t\t},";
 	}elseif ($_GET['dai'] == "daiLive"){
 			return "\n\t\t\t\t\t\t imadai: {
 				\t\t\t\tdisable: $switch,
 				\t\t\t\tassetTitle:'Live Video - Big Buck Bunny',
 				\t\t\t\tassetKey: 'sN_IYUG8STe1ZzhIIE_ksA',
 				\t\t\t\t},";
-	}elseif ($_GET['dai'] == "daiLiveViacom"){
-			return "\n\t\t\t\t\t\t imadai: {
-				\t\t\t\tdisable: $switch,
-				\t\t\t\tassetTitle:'Live Video - Big Buck Bunny',
-				\t\t\t\tassetKey: 'sN_IYUG8STe1ZzhIIE_ksA',
-				\t\t\t\t},";			
 	}elseif ($_GET['dai'] == "noDai"){
 			return "\n\t\t\t\t\t\t imadai: {
 				\t\t\t\tdisable:$switch},";
